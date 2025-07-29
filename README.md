@@ -1,7 +1,6 @@
 # Footballdirecto
 
-Proyecto base creado con Vite, React y TypeScript para mostrar resultados, posiciones y fixture de la Liga Argentina.
-Este es el MVP inicial del proyecto.
+Proyecto base creado con Vite, React y TypeScript para mostrar el calendario y la tabla de posiciones de la Liga Argentina. Este MVP incluye modo oscuro y enrutamiento con React Router.
 
 ## Instalación
 
