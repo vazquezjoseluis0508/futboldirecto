@@ -1,10 +1,12 @@
-function Home() {
+import React from 'react';
+import Calendar from '../components/Calendar';
+
+const Home: React.FC = () => {
   return (
-    <div>
-      <h1>Fútbol Directo</h1>
-      <p>Bienvenido a la web de resultados en vivo.</p>
+    <div className="home-page">
+      <Calendar />
     </div>
   );
-}
+};
 
 export default Home;

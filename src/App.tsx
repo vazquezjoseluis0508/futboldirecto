@@ -1,13 +1,19 @@
 import styles from './App.module.css';
 import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import Home from './pages/Home';
+import StandingsPage from './pages/StandingsPage';
 
 function App() {
   return (
     <div className={styles.app}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Navigation />
+      <main className={styles.main}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tabla" element={<StandingsPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }

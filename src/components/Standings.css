@@ -1,0 +1,232 @@
+.standings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.standings-header {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.standings-header h2 {
+  color: #333;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.legend-color.champions-league {
+  background-color: #28a745;
+}
+
+.legend-color.europa-league {
+  background-color: #17a2b8;
+}
+
+.legend-color.relegation {
+  background-color: #dc3545;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.standings-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.standings-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.standings-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 8px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.standings-table th:first-child {
+  text-align: center;
+  width: 50px;
+}
+
+.standings-table th:nth-child(2) {
+  text-align: left;
+  width: 200px;
+}
+
+.standings-table th:nth-child(10) {
+  width: 120px;
+}
+
+.standings-table td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.standings-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.standings-table tr.champions-league {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.standings-table tr.europa-league {
+  background-color: rgba(23, 162, 184, 0.1);
+}
+
+.standings-table tr.relegation {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.position {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.team-name {
+  text-align: left !important;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.goal-difference {
+  font-weight: 600;
+}
+
+.points {
+  font-weight: 700;
+  font-size: 16px;
+  color: #007bff;
+}
+
+.form {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.form-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.standings-footer {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.standings-footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.standings-footer strong {
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .standings-container {
+    padding: 15px;
+  }
+  
+  .standings-header h2 {
+    font-size: 24px;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .standings-table {
+    font-size: 12px;
+  }
+  
+  .standings-table th,
+  .standings-table td {
+    padding: 8px 4px;
+  }
+  
+  .standings-table th:nth-child(10),
+  .standings-table td:nth-child(10) {
+    display: none;
+  }
+  
+  .team-name {
+    font-size: 13px;
+  }
+  
+  .form-indicator {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .standings-table th:nth-child(8),
+  .standings-table td:nth-child(8) {
+    display: none;
+  }
+  
+  .standings-table th:nth-child(9),
+  .standings-table td:nth-child(9) {
+    display: none;
+  }
+} 

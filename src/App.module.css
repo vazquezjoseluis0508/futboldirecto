@@ -1,4 +1,17 @@
 .app {
-  text-align: center;
-  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main {
+  padding-top: 20px;
+  min-height: calc(100vh - 70px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 15px;
+  }
 }
