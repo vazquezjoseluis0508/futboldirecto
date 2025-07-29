@@ -28,12 +28,16 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="dashboard">
-      <div className="dashboard-header">
-        <h1>Dashboard</h1>
-        <p>Resumen del fútbol argentino y sudamericano</p>
-      </div>
+      
 
       <div className="dashboard-content">
+        {/* Calendario mensual */}
+        <div className="calendar-section">
+          <h2>Calendario de Partidos</h2>
+          <p>Próximos partidos importantes del mes</p>
+          <MonthlyCalendar />
+        </div>
+
         {/* Sección de clasificados */}
         <div className="qualifications-section">
           <div className="qualifications-grid">
@@ -91,13 +95,6 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Calendario mensual */}
-        <div className="calendar-section">
-          <h2>Calendario de Partidos</h2>
-          <p>Próximos partidos importantes del mes</p>
-          <MonthlyCalendar />
         </div>
       </div>
     </div>
