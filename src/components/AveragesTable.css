@@ -1,4 +1,4 @@
-.standings-container {
+.averages-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -6,13 +6,13 @@
   color: #e0e0e0;
 }
 
-.standings-header {
+.averages-header {
   margin-bottom: 30px;
   padding-bottom: 15px;
   border-bottom: 2px solid #2a4a2a;
 }
 
-.standings-header h2 {
+.averages-header h2 {
   color: #e0e0e0;
   margin: 0 0 20px 0;
   font-size: 28px;
@@ -39,16 +39,16 @@
   border-radius: 3px;
 }
 
-.legend-color.champions-league {
+.legend-color.safe {
   background-color: #5a8a5a;
 }
 
-.legend-color.europa-league {
-  background-color: #2196F3;
+.legend-color.danger {
+  background-color: #f44336;
 }
 
-.legend-color.relegation {
-  background-color: #f44336;
+.legend-color.promotion {
+  background-color: #2196F3;
 }
 
 .loading {
@@ -58,7 +58,7 @@
   color: #666;
 }
 
-.standings-table {
+.averages-table {
   background: rgba(26, 26, 26, 0.8);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -67,13 +67,13 @@
   border: 1px solid #2a4a2a;
 }
 
-.standings-table table {
+.averages-table table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
 }
 
-.standings-table th {
+.averages-table th {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #1a2e1a 100%);
   color: #e0e0e0;
   padding: 15px 8px;
@@ -85,41 +85,41 @@
   border-bottom: 2px solid #2a4a2a;
 }
 
-.standings-table th:first-child {
+.averages-table th:first-child {
   text-align: center;
   width: 50px;
 }
 
-.standings-table th:nth-child(2) {
+.averages-table th:nth-child(2) {
   text-align: left;
   width: 200px;
 }
 
-.standings-table th:nth-child(10) {
+.averages-table th:nth-child(8) {
   width: 120px;
 }
 
-.standings-table td {
+.averages-table td {
   padding: 12px 8px;
   text-align: center;
   border-bottom: 1px solid #3a3a3a;
   vertical-align: middle;
 }
 
-.standings-table tr:hover {
-  background-color: rgba(90, 138, 90, 0.1);
+.averages-table tr:hover {
+  background-color: rgba(76, 175, 80, 0.1);
 }
 
-.standings-table tr.champions-league {
-  background-color: rgba(90, 138, 90, 0.05);
+.averages-table tr.status-safe {
+  background-color: rgba(76, 175, 80, 0.05);
 }
 
-.standings-table tr.europa-league {
-  background-color: rgba(33, 150, 243, 0.05);
-}
-
-.standings-table tr.relegation {
+.averages-table tr.status-danger {
   background-color: rgba(244, 67, 54, 0.05);
+}
+
+.averages-table tr.status-promotion {
+  background-color: rgba(33, 150, 243, 0.05);
 }
 
 .position {
@@ -135,60 +135,56 @@
   font-size: 15px;
 }
 
-.goal-difference {
-  font-weight: 600;
-}
-
-.points {
+.average {
   font-weight: 700;
   font-size: 16px;
-  color: #5a8a5a;
+  color: #4CAF50;
 }
 
-.form {
-  display: flex;
-  gap: 2px;
-  justify-content: center;
+.last-year {
+  font-weight: 600;
+  color: #888;
 }
 
-.form-indicator {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+.difference {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.standings-footer {
+.averages-footer {
   background: rgba(26, 26, 26, 0.8);
   padding: 20px;
   border-radius: 8px;
-  border: 1px solid #2a4a2a;
+  border: 1px solid #2d5a2d;
 }
 
-.standings-footer p {
+.averages-footer p {
   margin: 5px 0;
   font-size: 14px;
   color: #e0e0e0;
   line-height: 1.5;
 }
 
-.standings-footer strong {
-  color: #5a8a5a;
+.averages-footer strong {
+  color: #4CAF50;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .standings-container {
+  .averages-container {
     padding: 15px;
   }
   
-  .standings-header h2 {
+  .averages-header h2 {
     font-size: 24px;
   }
   
@@ -197,17 +193,22 @@
     gap: 10px;
   }
   
-  .standings-table {
+  .averages-table {
     font-size: 12px;
   }
   
-  .standings-table th,
-  .standings-table td {
+  .averages-table th,
+  .averages-table td {
     padding: 8px 4px;
   }
   
-  .standings-table th:nth-child(10),
-  .standings-table td:nth-child(10) {
+  .averages-table th:nth-child(6),
+  .averages-table td:nth-child(6) {
+    display: none;
+  }
+  
+  .averages-table th:nth-child(7),
+  .averages-table td:nth-child(7) {
     display: none;
   }
   
@@ -215,38 +216,37 @@
     font-size: 13px;
   }
   
-  .form-indicator {
-    width: 16px;
-    height: 16px;
+  .status-badge {
     font-size: 8px;
+    padding: 2px 6px;
   }
 }
 
 @media (max-width: 480px) {
-  .standings-container {
+  .averages-container {
     padding: 10px;
   }
   
-  .standings-header h2 {
+  .averages-header h2 {
     font-size: 20px;
   }
   
-  .standings-table th:nth-child(8),
-  .standings-table td:nth-child(8) {
+  .averages-table th:nth-child(4),
+  .averages-table td:nth-child(4) {
     display: none;
   }
   
-  .standings-table th:nth-child(9),
-  .standings-table td:nth-child(9) {
+  .averages-table th:nth-child(5),
+  .averages-table td:nth-child(5) {
     display: none;
   }
 
-  .standings-table {
+  .averages-table {
     font-size: 11px;
   }
 
-  .standings-table th,
-  .standings-table td {
+  .averages-table th,
+  .averages-table td {
     padding: 6px 3px;
   }
 
@@ -254,28 +254,27 @@
     font-size: 12px;
   }
 
-  .points {
+  .average {
     font-size: 14px;
   }
 
-  .form-indicator {
-    width: 14px;
-    height: 14px;
+  .status-badge {
     font-size: 7px;
+    padding: 1px 4px;
   }
 }
 
 @media (max-width: 360px) {
-  .standings-header h2 {
+  .averages-header h2 {
     font-size: 18px;
   }
   
-  .standings-table {
+  .averages-table {
     font-size: 10px;
   }
 
-  .standings-table th,
-  .standings-table td {
+  .averages-table th,
+  .averages-table td {
     padding: 4px 2px;
   }
 
@@ -283,13 +282,12 @@
     font-size: 11px;
   }
 
-  .points {
+  .average {
     font-size: 13px;
   }
 
-  .form-indicator {
-    width: 12px;
-    height: 12px;
+  .status-badge {
     font-size: 6px;
+    padding: 1px 3px;
   }
 } 

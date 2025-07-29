@@ -1,10 +1,10 @@
 import React from 'react';
-import Calendar from '../components/Calendar';
+import Dashboard from '../components/Dashboard';
 
 const Home: React.FC = () => {
   return (
     <div className="home-page">
-      <Calendar />
+      <Dashboard />
     </div>
   );
 };

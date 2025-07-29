@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
 }
 
 .calendar-header {
@@ -11,11 +12,11 @@
   align-items: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #2a4a2a;
 }
 
 .calendar-header h2 {
-  color: #333;
+  color: #e0e0e0;
   margin: 0;
   font-size: 28px;
   font-weight: 600;
@@ -29,22 +30,23 @@
 
 .date-filter label {
   font-weight: 500;
-  color: #555;
+  color: #e0e0e0;
 }
 
 .date-filter select {
   padding: 8px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #3a3a3a;
   border-radius: 6px;
-  background-color: white;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
   font-size: 14px;
   cursor: pointer;
 }
 
 .date-filter select:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  border-color: #5a8a5a;
+  box-shadow: 0 0 0 2px rgba(90, 138, 90, 0.25);
 }
 
 .loading {
@@ -61,17 +63,18 @@
 }
 
 .match-card {
-  background: white;
-  border: 1px solid #e0e0e0;
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid #2a4a2a;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .match-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border-color: #5a8a5a;
 }
 
 .match-header {
@@ -82,7 +85,7 @@
 }
 
 .competition {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5a8a5a 0%, #2a4a2a 100%);
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
@@ -123,11 +126,11 @@
 .team-name {
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .score {
-  background: #007bff;
+  background: #5a8a5a;
   color: white;
   width: 30px;
   height: 30px;
@@ -156,18 +159,18 @@
 }
 
 .time {
-  background: #f8f9fa;
-  color: #333;
+  background: rgba(42, 42, 42, 0.8);
+  color: #e0e0e0;
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3a3a3a;
 }
 
 .match-date {
   text-align: center;
-  color: #666;
+  color: #888;
   font-size: 14px;
   font-style: italic;
 }
@@ -177,9 +180,9 @@
   padding: 40px;
   color: #666;
   font-size: 16px;
-  background: #f8f9fa;
+  background: rgba(26, 26, 26, 0.8);
   border-radius: 8px;
-  border: 1px dashed #ddd;
+  border: 1px dashed #3a3a3a;
 }
 
 /* Responsive design */
